@@ -4,6 +4,7 @@ import { eq, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { entries } from "@/lib/schema";
 import { NoteView } from "@/components/NoteView";
+import { WindowCard } from "@/components/WindowCard";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -48,9 +49,9 @@ export default async function SlugPage(props: PageProps<"/[slug]">) {
             ← golink
           </Link>
         </header>
-        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+        <WindowCard title={`~/golink/${normalized}`}>
           <NoteView content={row.content} expiresAt={row.expiresAt} />
-        </div>
+        </WindowCard>
       </div>
     </main>
   );
