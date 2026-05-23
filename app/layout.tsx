@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "go — anonim link & not paylaş",
+  title: "golink — anonim link & not paylaş",
   description: "Linkini veya kısa notunu paylaş, hesap gerektirmez.",
 };
 

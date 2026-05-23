@@ -44,8 +44,8 @@ export default async function SlugPage(props: PageProps<"/[slug]">) {
     <main className="flex flex-1 items-center justify-center p-6">
       <div className="w-full max-w-2xl">
         <header className="mb-4">
-          <Link href="/" className="text-xs font-medium text-gray-500 hover:text-gray-900">
-            ← go
+          <Link href="/" className="text-xs font-medium text-gray-400 hover:text-gray-600">
+            ← golink
           </Link>
         </header>
         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">

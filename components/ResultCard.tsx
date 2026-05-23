@@ -14,7 +14,7 @@ export function ResultCard({ url, expiresAt, onReset }: Props) {
       <div>
         <p className="text-xs uppercase tracking-wider text-gray-500 mb-2">Linkin hazır</p>
         <div className="flex items-center gap-2 rounded-md border border-gray-300 bg-gray-50 px-3 py-2.5">
-          <span className="flex-1 truncate font-mono text-sm text-gray-900">{url}</span>
+          <span className="flex-1 truncate font-mono text-sm text-gray-600">{url}</span>
           <CopyButton value={url} />
         </div>
       </div>
@@ -26,7 +26,7 @@ export function ResultCard({ url, expiresAt, onReset }: Props) {
       <button
         type="button"
         onClick={onReset}
-        className="self-start text-sm font-medium text-gray-900 underline-offset-4 hover:underline"
+        className="self-start text-sm font-medium text-gray-600 underline-offset-4 hover:underline"
       >
         Yeni oluştur
       </button>

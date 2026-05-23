@@ -19,7 +19,7 @@ export function CopyButton({ value, label = "Kopyala" }: { value: string; label?
     <button
       type="button"
       onClick={onClick}
-      className="rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-colors"
+      className="rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-500 hover:border-gray-400 hover:bg-gray-50 transition-colors"
     >
       {copied ? "Kopyalandı" : label}
     </button>

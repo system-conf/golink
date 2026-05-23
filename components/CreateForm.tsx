@@ -67,7 +67,7 @@ export function CreateForm() {
           type="button"
           onClick={() => setTab("link")}
           className={`px-4 py-1.5 text-sm font-medium rounded transition-colors ${
-            tab === "link" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+            tab === "link" ? "bg-white text-gray-600 shadow-sm" : "text-gray-500 hover:text-gray-600"
           }`}
         >
           Link
@@ -76,7 +76,7 @@ export function CreateForm() {
           type="button"
           onClick={() => setTab("note")}
           className={`px-4 py-1.5 text-sm font-medium rounded transition-colors ${
-            tab === "note" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+            tab === "note" ? "bg-white text-gray-600 shadow-sm" : "text-gray-500 hover:text-gray-600"
           }`}
         >
           Not
@@ -84,7 +84,7 @@ export function CreateForm() {
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="content" className="text-sm font-medium text-gray-700">
+        <label htmlFor="content" className="text-sm font-medium text-gray-500">
           {tab === "link" ? "Uzun link" : "Notun"}
         </label>
         {tab === "link" ? (
@@ -95,7 +95,7 @@ export function CreateForm() {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="https://uzun-link..."
-            className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-900"
+            className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-gray-400"
           />
         ) : (
           <textarea
@@ -105,13 +105,13 @@ export function CreateForm() {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="Notunu buraya yaz..."
-            className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-900 font-mono resize-none"
+            className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-gray-400 font-mono resize-none"
           />
         )}
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="slug" className="text-sm font-medium text-gray-700">
+        <label htmlFor="slug" className="text-sm font-medium text-gray-500">
           Kısa isim (opsiyonel)
         </label>
         <input
@@ -120,19 +120,19 @@ export function CreateForm() {
           value={slug}
           onChange={(e) => setSlug(e.target.value)}
           placeholder="boş bırakırsan otomatik"
-          className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-900"
+          className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-gray-400"
         />
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="expires" className="text-sm font-medium text-gray-700">
+        <label htmlFor="expires" className="text-sm font-medium text-gray-500">
           Geçerlilik
         </label>
         <select
           id="expires"
           value={expiresIn}
           onChange={(e) => setExpiresIn(e.target.value as Expiration)}
-          className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:border-gray-900"
+          className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-600 focus:outline-none focus:border-gray-400"
         >
           {(Object.keys(EXPIRATION_LABELS) as Expiration[]).map((k) => (
             <option key={k} value={k}>
@@ -143,7 +143,7 @@ export function CreateForm() {
       </div>
 
       {error && (
-        <p className="text-sm text-gray-800 rounded-md border border-gray-300 bg-gray-100 px-3 py-2">
+        <p className="text-sm text-gray-600 rounded-md border border-gray-300 bg-gray-100 px-3 py-2">
           {error}
         </p>
       )}
@@ -151,7 +151,7 @@ export function CreateForm() {
       <button
         type="submit"
         disabled={loading}
-        className="rounded-md bg-gray-900 px-4 py-2.5 text-sm font-medium text-white hover:bg-gray-700 disabled:bg-gray-400 transition-colors"
+        className="rounded-md bg-gray-200 px-4 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 transition-colors"
       >
         {loading ? "Oluşturuluyor..." : "Oluştur"}
       </button>
