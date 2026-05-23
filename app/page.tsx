@@ -12,8 +12,20 @@ export default function HomePage() {
         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
           <CreateForm />
         </div>
-        <footer className="mt-6 text-center text-xs text-gray-400">
-          Spam koruması için IP başına dakikada 5, günde 50 link.
+        <footer className="mt-6 flex flex-col items-center gap-2 text-center text-xs text-gray-400">
+          <p>Spam koruması için IP başına dakikada 5, günde 50 link.</p>
+          <p className="flex items-center gap-1.5 font-mono">
+            <span>./system.conf</span>
+            <span className="text-gray-300">·</span>
+            <a
+              href="https://github.com/system-conf/golink"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 hover:text-gray-600 hover:underline transition-colors"
+            >
+              github
+            </a>
+          </p>
         </footer>
       </div>
     </main>
