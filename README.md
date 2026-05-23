@@ -1,6 +1,8 @@
-# go — anonim link & not paylaşımı
+# golink — anonim link & not paylaşımı
 
-`go.systemconf.online` altında çalışacak küçük bir kısaltma / pastebin servisi.
+![golink ana sayfa](./docs/screenshot.png)
+
+[go.systemconf.online](https://go.systemconf.online) altında çalışan küçük bir kısaltma / pastebin servisi. Custom slug, geçerlilik süresi, IP başına rate limit, PWA olarak yüklenebilir.
 
 - Link kısalt veya kısa not paylaş
 - Custom slug ver (boş bırakırsan otomatik 6 karakter)
