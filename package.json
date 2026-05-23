@@ -2,22 +2,40 @@
   "name": "go-link",
   "version": "0.1.0",
   "private": true,
+  "description": "Anonim link ve not paylaşım servisi — custom slug, expiration, rate limit.",
+  "license": "MIT",
+  "author": "system-conf",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/system-conf/golink.git"
+  },
+  "homepage": "https://go.systemconf.online",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.3",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.0",
+    "drizzle-orm": "^0.45.2",
+    "nanoid": "^5.1.11",
     "next": "16.2.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
